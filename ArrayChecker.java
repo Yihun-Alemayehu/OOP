@@ -9,19 +9,28 @@ public class ArrayChecker {
 
     }
 
-    public static boolean isArraySorted(int[] arr, int index) {
-        // Base case: If the array has one or no elements, it is considered sorted
-        if (index >= arr.length - 1) {
-            return true;
-        }
+    // public static boolean isArraySorted(int[] arr, int index) {
+    //     // Base case: If the array has one or no elements, it is considered sorted
+    //     if (index >= arr.length - 1) {
+    //         return true;
+    //     }
 
-        // Recursive case: Check if the current element is greater than or equal to the
-        // next element
-        if (arr[index] > arr[index + 1]) {
-            return false; // The array is not sorted
-        }
+    //     // Recursive case: Check if the current element is greater than or equal to the
+    //     // next element
+    //     if (arr[index] > arr[index + 1]) {
+    //         return false; // The array is not sorted
+    //     }
 
-        // Recursively check the rest of the array
-        return isArraySorted(arr, index + 1);
+    //     // Recursively check the rest of the array
+    //     return isArraySorted(arr, index + 1);
+    // }
+
+    public static boolean isArray(int arr[], int index){
+        if(arr[index]> arr[index +1]){
+            return false;
+        }
+        
+        return isArray(arr, index+1);
+        
     }
 }
